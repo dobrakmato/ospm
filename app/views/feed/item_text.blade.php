@@ -1,0 +1,1 @@
+<div class="f-item fi-text"><div style="padding:16px;">{{ $item->content }}</div></div>

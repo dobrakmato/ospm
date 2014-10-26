@@ -1,0 +1,106 @@
+@CHARSET "UTF-8";
+
+body {
+	font-family: 'Roboto', sans-serif;
+	margin: 0 0;
+	padding: 0 0;
+}
+
+table {
+	width:100%;
+}
+
+tr, td, th, tbody, thead {
+	margin:0;
+}
+
+td {
+	text-align: center;
+}
+
+th {
+	background:#eee;
+}
+
+.topbar {
+	width: 100%;
+	display: block;
+	height: 3em;
+	background: #fafafa;
+	border-bottom: 1px solid #aaa;
+}
+
+.title {
+	font-size: 2em;
+	font-weight: 900;
+	position: absolute;
+	margin: 4px 4px 4px 16px;
+}
+
+.tb-item {
+	display: inline-block;
+	padding: 0.8em;
+}
+
+.tb-item:hover {
+	background: #f4f4f4;
+}
+
+
+.tb-right {
+	float:right;
+}
+
+.sidebar {
+	border-right: 1px solid #aaa;
+	background: #fdfdfd;
+	display: inline-block;
+	width: 200px;
+	height: 100%;
+	overflow: auto;
+	position: absolute;
+	left:0;
+}
+
+.sb-item > a {
+	color: #3388ee;
+	text-decoration: none;
+	background: #fafafa;
+	border-bottom: 1px solid #ddd;
+	display: inline-block;
+	padding: 5px 0px;
+	text-align: center;
+	width: 200px;
+}
+
+.sb-item > a:hover {
+	text-decoration: underline;
+}
+
+.content {
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	left: 200px;
+	padding: 1em;
+	overflow: auto;
+}
+
+
+
+.feeditems {
+	width:50%;
+	margin:0 auto;
+}
+
+.f-item {
+	width: 100%;
+	margin: 16px;
+	background: #fff;
+	border-radius:3px;
+	box-shadow: 0 1px #FFFFFF inset, 0 1px 3px rgba(34, 25, 25, 0.4);
+}
+
+.f-text {
+	
+}

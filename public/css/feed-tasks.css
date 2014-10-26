@@ -1,0 +1,79 @@
+@CHARSET "UTF-8";
+
+.fi-task {
+	
+}
+
+.fi-task-h {
+	padding:16px;
+	background: #44ee77;
+	border-radius: 3px 3px 0px 0px;
+}
+
+.fi-task-ht {
+	margin: 0;
+	display: inline-block;
+}
+
+.fi-task-date {
+	display: inline-block;
+	float: right;
+	border-radius: 6px;
+	background: #1FB560;
+	padding: 7px;
+	color: white;
+	transition: 300ms ease all;
+}
+
+.fi-tddi{
+	width:0px;
+	padding:7px 0;
+	overflow:hidden;
+}
+
+.fi-tden{
+	width:5em;
+	padding:7px 7px;
+	margin-right: 8px;
+}
+
+.fi-task-c {
+	padding:16px;
+}
+
+.fi-task-meta {
+	color: #888;
+	font-size:12px;
+}
+
+.fi-task-bot {
+	color: #888;
+	font-size: 10px;
+}
+
+.fi-task-f {
+	padding:16px;
+	background: #fafafa;
+	border-radius: 0px 0px 3px 3px;
+	
+}
+
+.fi-task-btn {
+	border-radius: 4px;
+	padding: 6px;
+	border: 1px solid #aaa;
+	color: white;
+	text-decoration: none;
+}
+
+.fi-task-bp {
+	background: #7799ee;
+	border-color: #4488cc;
+	float: right;
+	margin-top: -6px;
+}
+
+.fi-task-bp:hover {
+	background: #88aaff;
+	border-color: #4488cc;
+}
