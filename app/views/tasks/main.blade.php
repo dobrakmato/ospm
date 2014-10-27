@@ -1,9 +1,7 @@
 @extends('layouts.main_2')
 
 @section('content')
-	<div style="margin-bottom: 16px;">
-		<a href="{{ action('TasksController@create') }}">Create task</a>
-	</div>
+	@include('tasks.menu')
 	<div class="tasks">
 		<table>
 			<thead>
@@ -25,6 +23,7 @@
 					<td>{{ $task->votes() }}</td>
 					<td>{{ $task->priority() }}</td>
 					<td>{{ link_to_action('TasksController@view', 'View', array('id' => $task->id() )) }} |
+						{{ link_to_action('TasksController@edit', 'Edit', array('id' => $task->id() )) }} |
 						{{ link_to_action('TasksController@remove', 'Remove', array('id' => $task->id() )) }}</td>		
 				</tr>
 			@endforeach

@@ -22,7 +22,18 @@ class Task extends Eloquent {
 	 */
 	public function author()
 	{
-		return $this->belongsTo('User', 'author');
+		return $this->belongsTo('User', 'author')->getResults();
+	}
+	
+	/**
+	 * Get the task's author.
+	 *
+	 * @return User
+	 */
+	public function authorDisplayName()
+	{
+		$user = $this->belongsTo('User', 'author')->getResults();
+		return $user->displayName();
 	}
 	
 	/**
@@ -66,7 +77,17 @@ class Task extends Eloquent {
 	 */
 	public function category()
 	{
-		return $this->belongsTo('TaskCategory', 'category');
+		return $this->belongsTo('TaskCategory', 'category')->getResults();
+	}
+	
+	/**
+	 *
+	 * @return TaskCategory
+	 */
+	public function categoryName()
+	{
+		$category = $this->category();
+		return $category->name();
 	}
 	
 	/**
@@ -108,6 +129,11 @@ class Task extends Eloquent {
 	public function votes()
 	{
 		return $this->votes;
+	}
+	
+	public function visibility()
+	{
+		return $this->visibility;
 	}
 	
 	/**

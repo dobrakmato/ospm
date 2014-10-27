@@ -16,14 +16,16 @@ class TasksController extends AdminController {
 		return View::make('tasks.remove');
 	}
 	
-	public function update()
+	public function edit($id)
 	{
-		return View::make('tasks.update');
+		$task = Task::find($id);
+		return View::make('tasks.edit', array('task' => $task));
 	}
 	
 	public function view($id)
 	{
 		$task = Task::find($id);
-		return View::make('tasks.view', array('task' => $task));
+		$comments = $task->comments();
+		return View::make('tasks.view', array('task' => $task, 'comments' => $comments));
 	}
 }

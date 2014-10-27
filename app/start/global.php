@@ -85,3 +85,7 @@ require_once app_path().'/ModuleEngine.php';
 
 // Let modules load!
 ModuleEngine::loadModules();
+
+// Add HTML5 Form elements
+require_once app_path().'/start/form.ext.php';
+

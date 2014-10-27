@@ -7,7 +7,7 @@
 ModuleEngine::any('/tasks', 'TasksController@index');
 ModuleEngine::any('/tasks/create', 'TasksController@create');
 ModuleEngine::any('/tasks/remove/{id}', 'TasksController@remove');
-ModuleEngine::any('/tasks/update/{id}', 'TasksController@update');
+ModuleEngine::any('/tasks/edit/{id}', 'TasksController@edit');
 ModuleEngine::any('/tasks/view/{id}', 'TasksController@view');
 
 // App hooks

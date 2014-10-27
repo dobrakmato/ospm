@@ -22,3 +22,5 @@ Route::get('/system/register', 'LoginController@showRegister');
 
 Route::get('/system/users', 'AdminController@users');
 Route::get('/system/projects', 'AdminController@projects');
+
+Route::any('/api/{item}/{id}', 'APIController@get');
