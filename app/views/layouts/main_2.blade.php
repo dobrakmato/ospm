@@ -5,8 +5,8 @@
 		<div class="topbar">
 			<span class="title">{{ OSPMConfig::$title }}</span>
 			<span class="tb-item tb-right">{{ HTML::linkAction('LoginController@logout', 'Logout') }}</span>
-			<span class="tb-item tb-right">{{ HTML::linkAction('AdminController@users', 'Manage users') }}</span>
-			<span class="tb-item tb-right">{{ HTML::linkAction('AdminController@projects', 'Manage projects') }}</span>
+			<span class="tb-item tb-right">{{ HTML::linkAction('SystemController@users', 'Manage users') }}</span>
+			<span class="tb-item tb-right">{{ HTML::linkAction('SystemController@projects', 'Manage projects') }}</span>
 		</div>
 		<div class="page">
 			<div class="sidebar">

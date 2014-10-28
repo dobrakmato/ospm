@@ -13,7 +13,7 @@
 			</p>
 			<p>
 				{{ Form::label('author', 'Author: ') }}
-				{{ Form::text('author', $task->authorDisplayName()) }}
+				{{ Form::text('author', $task->authorDisplayName(), array('disabled')) }}
 			</p>
 			<p>
 				{{ Form::label('assingedto', 'Assinged to: ') }}
@@ -21,11 +21,11 @@
 			</p>
 			<p>
 				{{ Form::label('category', 'Category: ') }}
-				{{ Form::text('category', 'uncategorized') }}
+				{{ Form::text('category', 'uncategorized', array('disabled')) }}
 			</p>
 			<p>
 				{{ Form::label('project', 'Project: ') }}
-				{{ Form::text('project', 'main') }}
+				{{ Form::text('project', 'main', array('disabled')) }}
 			</p>
 			<p>
 				{{ Form::label('tags', 'Tags: ') }}
@@ -45,7 +45,7 @@
 			</p>
 			<p>
 				{{ Form::label('reproduction', 'Reproduction: ') }}
-				{{ Form::text('reproduction', $task->reproduction()) }}
+				{{ Form::textarea('reproduction', $task->reproduction()) }}
 			</p>
 			<p>
 				{{ Form::label('project', 'Project: ') }}

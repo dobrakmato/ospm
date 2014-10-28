@@ -11,7 +11,7 @@
 	<div class="fi-task-f">
 		<span class="fi-task-bot"><span title="Sorted by priority" style="cursor: help;">by priority</span> | 
 		<a class="fi-task-bot" href="#" title="mark as not important right now">not important</a></span>
-	
+		<a class="fi-task-btn fi-task-bd" href="{{ $item->actions['primary']['url'] }}">Done</a>
 		@if($item->actions['primary'] != null)
 			<a class="fi-task-btn fi-task-bp" href="{{ $item->actions['primary']['url'] }}">{{ $item->actions['primary']['title'] }}</a>
 		@endif

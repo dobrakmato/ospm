@@ -20,7 +20,7 @@ Route::any('/system/logout', 'LoginController@logout');
 
 Route::get('/system/register', 'LoginController@showRegister');
 
-Route::get('/system/users', 'AdminController@users');
-Route::get('/system/projects', 'AdminController@projects');
+Route::get('/system/users', 'SystemController@users');
+Route::get('/system/projects', 'SystemController@projects');
 
 Route::any('/api/{item}/{id}', 'APIController@get');

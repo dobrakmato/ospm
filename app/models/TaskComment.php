@@ -25,7 +25,7 @@ class TaskComment extends Eloquent {
 	 */
 	public function author()
 	{
-		return $this->belongsTo('User', 'user_id');
+		return $this->belongsTo('User', 'user_id')->getResults();
 	}
 	
 	/**

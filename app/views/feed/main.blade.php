@@ -2,15 +2,12 @@
 
 @section('content')
 	<div class="feeditems">
-		@foreach($items as $item)
-			@if($item->type == 'text')
-				@include('feed.item_text', array('item' => $item))
-			@elseif ($item->type == 'task')
-				@include('feed.item_task', array('item' => $item))
-			@endif
-		@endforeach
-		<div style="text-align:center;margin-top:4em;">
-			<a href="#" style="color:#888;font-size:14px;">load more entries</a>
+		<div id="feedentries">
+			
 		</div>
+		<div style="text-align:center;margin-top:4em;">
+			<a href="javascript:feed_loadMore();" id="feedstatus" style="color:#888;font-size:14px;">loading...</a>
+		</div>
+		<script type="text/javascript">feed_loadItems();</script>
 	</div>
 @stop

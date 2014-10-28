@@ -3,6 +3,11 @@ class FeedController extends AdminController {
 
 	public function index()
 	{
+		return View::make('feed.main');
+	}
+	
+	public function ajax($page)
+	{
 		// Get items
 		$items = array();
 		
@@ -26,6 +31,6 @@ class FeedController extends AdminController {
 			$items[] = $post;
 		}
 			
-		return View::make('feed.main', array("items" => $items));
+		return View::make('feed.ajax_1', array("items" => $items));
 	}
 }

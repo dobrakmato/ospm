@@ -17,8 +17,8 @@
 			@foreach($tasks as $task)
 				<tr>
 					<td>{{ $task->title() }}</td>
-					<td>{{ $task->status() }}</td>	
-					<td>{{ $task->assingedToDisplayName() }}</td>	
+					<td><a href="?filter=user&c={{ $task->status() }}">{{ $task->status() }}</a></td>	
+					<td><a href="?filter=user&c={{ $task->assingedTo()->id() }}">{{ $task->assingedToDisplayName() }}</a></td>	
 					<td>{{ $task->target_date() }}</td>	
 					<td>{{ $task->votes() }}</td>
 					<td>{{ $task->priority() }}</td>
