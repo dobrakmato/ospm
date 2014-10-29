@@ -89,3 +89,11 @@ ModuleEngine::loadModules();
 // Add HTML5 Form elements
 require_once app_path().'/start/form.ext.php';
 
+// Cool functions
+function startsWith($haystack, $needle) {
+	return $needle === "" || strpos($haystack, $needle) === 0;
+}
+function endsWith($haystack, $needle) {
+	return $needle === "" || substr($haystack, -strlen($needle)) === $needle;
+}
+

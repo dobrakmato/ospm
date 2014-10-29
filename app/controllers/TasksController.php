@@ -2,7 +2,7 @@
 class TasksController extends AdminController {
 	public function index()
 	{
-		$tasks = Task::all(array('title', 'id', 'status', 'target_date', 'votes', 'assinged', 'priority'));
+		$tasks = Task::all();
 		return View::make('tasks.main', array('tasks' => $tasks));
 	}
 	
@@ -22,10 +22,16 @@ class TasksController extends AdminController {
 		return View::make('tasks.edit', array('task' => $task));
 	}
 	
+	public function filter($by, $cond)
+	{
+		$tasks = Task::where($by, '=', $cond);
+		return View::make('tasks.main', array('tasks' => $tasks));
+	}
+	
 	public function view($id)
 	{
 		$task = Task::find($id);
-		$comments = $task->comments();
+		$comments = $task->comments()->getResults();
 		return View::make('tasks.view', array('task' => $task, 'comments' => $comments));
 	}
 }

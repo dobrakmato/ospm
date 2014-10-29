@@ -1,76 +1,30 @@
 <?php
 
-use Illuminate\Auth\UserTrait;
 use Illuminate\Auth\UserInterface;
-use Illuminate\Auth\Reminders\RemindableTrait;
-use Illuminate\Auth\Reminders\RemindableInterface;
+class User extends Eloquent implements UserInterface {
+	use Illuminate\Auth\UserTrait;
 
-class User extends Eloquent implements UserInterface, RemindableInterface {
-
-	use UserTrait, RemindableTrait;
-
-	/**
-	 * The database table used by the model.
-	 *
-	 * @var string
-	 */
 	protected $table = 'users';
+	public $timestamps = true;
 
-	/**
-	 * The attributes excluded from the model's JSON form.
-	 *
-	 * @var array
-	 */
-	protected $hidden = array('password', 'remember_token');
-	
-	public function id()
+	public function chatThreads()
 	{
-		return $this->id;
+		return $this->hasMany('MessageThread', 'thread_id');
 	}
-	
-	public function username()
-	{
-		return $this->username;
-	}
-	
-	public function displayName()
-	{
-		return $this->displayname;
-	}
-	
+
 	public function tasks()
 	{
-		return $this->hasMany('Task');
+		return $this->hasMany('Task', 'task_id');
 	}
-	
-	/**
-	 * Get the date the post was created.
-	 *
-	 * @param \Carbon|null $date
-	 * @return string
-	 */
-	public function date($date=null)
+
+	public function role()
 	{
-		if(is_null($date)) {
-			$date = $this->created_at;
-		}
-	
-		return String::date($date);
+		return $this->hasOne('Role', 'role_id');
 	}
-	
-	/**
-	 * Get the task's created at date.
-	 */
-	public function created_at() 
+
+	public function metadata()
 	{
-		return $this->date($this->created_at);
+		return $this->hasOne('Metadata', 'metadata_id');
 	}
-	
-	/**
-	 * Get the task's updated at date.
-	 */
-	public function updated_at()
-	{
-		return $this->date($this->updated_at);
-	}
+
 }

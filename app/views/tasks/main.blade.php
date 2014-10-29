@@ -16,15 +16,15 @@
 			<tbody>
 			@foreach($tasks as $task)
 				<tr>
-					<td>{{ $task->title() }}</td>
-					<td><a href="?filter=user&c={{ $task->status() }}">{{ $task->status() }}</a></td>	
-					<td><a href="?filter=user&c={{ $task->assingedTo()->id() }}">{{ $task->assingedToDisplayName() }}</a></td>	
-					<td>{{ $task->target_date() }}</td>	
-					<td>{{ $task->votes() }}</td>
-					<td>{{ $task->priority() }}</td>
-					<td>{{ link_to_action('TasksController@view', 'View', array('id' => $task->id() )) }} |
-						{{ link_to_action('TasksController@edit', 'Edit', array('id' => $task->id() )) }} |
-						{{ link_to_action('TasksController@remove', 'Remove', array('id' => $task->id() )) }}</td>		
+					<td>{{ $task->title }}</td>
+					<td><a href="/tasks/filter/status/{{ $task->status }}">{{ $task->status }}</a></td>	
+					<td><a href="/tasks/filter/assignedto_id/{{ $task->assignedto_id }}">{{ $task->assignedTo()->getResults()->displayname }}</a></td>	
+					<td>{{ $task->target_date }}</td>	
+					<td>{{ $task->votes }}</td>
+					<td>{{ $task->priority }}</td>
+					<td>{{ link_to_action('TasksController@view', 'View', array('id' => $task->id )) }} |
+						{{ link_to_action('TasksController@edit', 'Edit', array('id' => $task->id )) }} |
+						{{ link_to_action('TasksController@remove', 'Remove', array('id' => $task->id )) }}</td>		
 				</tr>
 			@endforeach
 			</tbody>

@@ -10,13 +10,17 @@ class LoginController extends BaseController {
 	public function doLogin() 
 	{
 		$userdata = array(
-				'username' 	=> Input::get('username'),
-				'password' 	=> Input::get('password')
+			'username' 	=> Input::get('username'),
+			'password' 	=> Input::get('password')
 		);
 		
 		// attempt to do the login
 		if (Auth::attempt($userdata)) {
-			return Redirect::action('IndexController@index');
+			if(Input::has('cb')) {
+				return Redirect::to(Input::get('cb'));
+			} else {
+				return Redirect::action('IndexController@index');
+			}
 		} else {
 			return Redirect::action('LoginController@showLogin')->withInput(Input::except('password'));
 		}

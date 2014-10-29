@@ -29,4 +29,4 @@ class Notification {
 	}
 }
 
-ModuleEngine::registerTopbar($action, $display, $icon);
+//ModuleEngine::registerTopbar($action, $display, $icon);
