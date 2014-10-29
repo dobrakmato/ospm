@@ -2,9 +2,9 @@
 class ModuleEngine
 {
 	protected static $sidebarItems = array();
+	protected static $topbarItems = array();
 	
-	public static function loadModules()
-	{
+	public static function loadModules() {
 		Debugbar::info("Loading modules...");
 		$files = array_diff(scandir(app_path().'/modules/'), array('.', '..'));
 		foreach ($files as $file) {
@@ -13,14 +13,20 @@ class ModuleEngine
 		}
 	}
 	
-	public static function getSidebarItems() 
-	{
+	public static function getSidebarItems() {
 		return ModuleEngine::$sidebarItems;
 	}
 	
-	public static function registerSidebar($action, $display, $icon = null)
-	{
+	public static function getTopbarItems() {
+		return ModuleEngine::$topbarItems;
+	}
+	
+	public static function registerSidebar($action, $display, $icon = null) {
 		ModuleEngine::$sidebarItems[] = array(0 => $action, 1 => $display, 2 => $icon);
+	}
+	
+	public static function registerTopbar($action, $display, $icon = null) {
+		ModuleEngine::$topbarItems[] = array(0 => $action, 1 => $display, 2 => $icon);
 	}
 	
 	public static function get($uri, $action) {

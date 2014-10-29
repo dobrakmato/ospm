@@ -1,6 +1,6 @@
 <?php
 
-class SystemController extends BaseController {
+class SystemController extends AdminController {
 	public function projects()
 	{
 		return View::make('system.projects');
