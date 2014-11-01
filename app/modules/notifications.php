@@ -29,4 +29,6 @@ class Notification {
 	}
 }
 
-//ModuleEngine::registerTopbar($action, $display, $icon);
+ModuleEngine::any('/notifications/ajax', 'NotificationsController@ajax');
+
+ModuleEngine::registerTopbar('NotificationsController@ajax', 'Notifications', 'img/world.png', 'notif_div');

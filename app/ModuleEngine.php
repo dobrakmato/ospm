@@ -25,8 +25,8 @@ class ModuleEngine
 		ModuleEngine::$sidebarItems[] = array(0 => $action, 1 => $display, 2 => $icon);
 	}
 	
-	public static function registerTopbar($action, $display, $icon = null) {
-		ModuleEngine::$topbarItems[] = array(0 => $action, 1 => $display, 2 => $icon);
+	public static function registerTopbar($action, $display, $icon = null, $iframe_id = null) {
+		ModuleEngine::$topbarItems[] = array(0 => $action, 1 => $display, 2 => $icon, 3 => $iframe_id);
 	}
 	
 	public static function get($uri, $action) {

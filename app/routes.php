@@ -21,6 +21,11 @@ Route::any('/system/logout', 'LoginController@logout');
 Route::get('/system/register', 'LoginController@showRegister');
 
 Route::get('/system/users', 'SystemController@users');
+Route::get('/system/users/{id}', 'SystemController@user');
+
 Route::get('/system/projects', 'SystemController@projects');
+Route::get('/system/projects/{id}', 'SystemController@project');
 
 Route::any('/api/{item}/{id}', 'APIController@get');
+
+// More registered dynamicaly via ModuleEngine from module_*.php files.

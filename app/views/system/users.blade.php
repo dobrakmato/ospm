@@ -1,6 +1,9 @@
 @extends('layouts.main_2')
 
 @section('content')
-	<div class="zone">
+	<div class="users">
+		@foreach($users as $user)
+			{{$user}}
+		@endforeach
 	</div>
 @stop
