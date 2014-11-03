@@ -1,25 +1,29 @@
 @extends('layouts.msgbox1')
 
-@section('title')
-Login
-@stop
-
 @section('message')
-	{{ Form::open() }}
-		<p>Use your username and password to log in!</p>
-		{{ Form::hidden('cb', Input::get('cb')) }}
-		<p>
-			{{ $errors->first('username') }}
-			{{ $errors->first('password') }}
-		</p>
-		<p>
-			{{ Form::label('username', 'Username: ') }}
-			{{ Form::text('username', Input::old('username'), array('placeholder' => "Username")) }}
-		</p>
-		<p>
-			{{ Form::label('password', 'Password: ') }}
-			{{ Form::password('password') }}
-		</p>
-		<p>{{ Form::submit('Log in') }} | {{ Form::button('Forgot password') }}</p>
+	{{ Form::open(array('class' => 'form-horizontal')) }}
+		<fieldset>
+			<legend>Log in</legend>
+			<p>Use your username and password to log in!</p>
+			{{ Form::hidden('cb', Input::get('cb')) }}
+
+			<div class="form-group">
+				{{ $errors->first('username') }}
+				{{ $errors->first('password') }}
+			</div>
+			<div class="form-group">
+				{{ Form::label('username', 'Username: ', array('class' => 'col-lg-3 control-label')) }}
+				<div class="col-lg-9">
+					{{ Form::text('username', Input::old('username'), array('placeholder' => "Username", 'class' => 'form-control')) }}
+				</div>
+			</div>
+			<div class="form-group">
+				{{ Form::label('password', 'Password: ', array('class' => 'col-lg-3 control-label')) }}
+				<div class="col-lg-9">
+					{{ Form::password('password', array('class' => 'form-control', 'placeholder' => "Password")) }}
+				</div>
+			</div>
+			<div>{{ Form::submit('Log in', array('class' => 'btn btn-primary')) }} | {{ Form::button('Forgot password', array('class' => 'btn btn-default')) }}</div>
+		</fieldset>
 	{{ Form::close() }}
 @stop

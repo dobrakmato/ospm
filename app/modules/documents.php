@@ -10,6 +10,6 @@ ModuleEngine::any('/documents/upload', 'DocumentsController@upload');
 ModuleEngine::any('/documents/view/{hash}', 'DocumentsController@view');
 
 // App hooks
-ModuleEngine::registerSidebar('DocumentsController@index', "View documents", 'img/page_white_stack.png');
-ModuleEngine::registerSidebar('DocumentsController@index', "Create document", 'img/page_white_add.png');
-ModuleEngine::registerSidebar('DocumentsController@index', "Upload document", 'img/page_white_get.png');
+ModuleEngine::registerSidebar('DocumentsController@index', "View documents", 'mdi-action-description');
+ModuleEngine::registerSidebar('DocumentsController@index', "Create document", 'mdi-action-note-add');
+ModuleEngine::registerSidebar('DocumentsController@index', "Upload document", 'mdi-file-file-upload');

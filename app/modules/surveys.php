@@ -10,5 +10,5 @@ ModuleEngine::any('/surveys/remove/{id}', 'SurveysController@remove');
 ModuleEngine::any('/surveys/view/{hash}', 'SurveysController@view');
 
 // App hooks
-ModuleEngine::registerSidebar('SurveysController@create', "Create survey", 'img/script_add.png');
-ModuleEngine::registerSidebar('SurveysController@index', "List surveys", 'img/script.png');
+ModuleEngine::registerSidebar('SurveysController@create', "Create survey", 'mdi-action-toc');
+ModuleEngine::registerSidebar('SurveysController@index', "List surveys", 'mdi-action-thumbs-up-down');

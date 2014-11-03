@@ -6,8 +6,9 @@
 
 .fi-task-h {
 	padding:16px;
-	background: #44ee77;
+	background: #0f9d58;
 	border-radius: 3px 3px 0px 0px;
+	color: white;
 }
 
 .fi-task-ht {
@@ -33,7 +34,7 @@
 }
 
 .fi-tden{
-	width:5em;
+	width: 6em;
 	padding:7px 7px;
 	margin-right: 8px;
 }
@@ -59,6 +60,16 @@
 	
 }
 
+.fi-task-f:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.fi-tbf {
+	margin: 0px 2px !important;
+}
+
 .fi-task-btn {
 	border-radius: 4px;
 	padding: 6px;
@@ -67,6 +78,8 @@
 	color: white;
 	text-decoration: none;
 }
+
+.fi-right{ float:right; }
 
 .fi-task-bp {
 	background: #7799ee;

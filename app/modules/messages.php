@@ -9,5 +9,5 @@ ModuleEngine::any('/messages/compose', 'MessagesController@compose');
 ModuleEngine::any('/messages/thread/{id}', 'MessagesController@thread');
 
 // App hooks
-ModuleEngine::registerSidebar('MessagesController@inbox', "Inbox", 'img/email_open.png');
-ModuleEngine::registerSidebar('MessagesController@compose', "Write message", 'img/email_edit.png');
+ModuleEngine::registerSidebar('MessagesController@inbox', "Inbox", 'mdi-content-inbox');
+ModuleEngine::registerSidebar('MessagesController@compose', "Write message", 'mdi-content-mail');

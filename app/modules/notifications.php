@@ -31,4 +31,4 @@ class Notification {
 
 ModuleEngine::any('/notifications/ajax', 'NotificationsController@ajax');
 
-ModuleEngine::registerTopbar('NotificationsController@ajax', 'Notifications', 'img/world.png', 'notif_div');
+ModuleEngine::registerTopbar('NotificationsController@ajax', 'Notifications', 'mdi-social-notifications-none', 'notif_div');

@@ -12,4 +12,4 @@ ModuleEngine::any('/tasks/view/{id}', 'TasksController@view');
 ModuleEngine::any('/tasks/filter/{by}/{cond}', 'TasksController@filter');
 
 // App hooks
-ModuleEngine::registerSidebar('TasksController@index', "Tasks", 'img/book_open.png');
+ModuleEngine::registerSidebar('TasksController@index', "Tasks", 'mdi-action-assignment');

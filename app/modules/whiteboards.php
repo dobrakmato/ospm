@@ -11,5 +11,5 @@ ModuleEngine::any('/whiteboards/session/{id}/{sessionid}', 'WhiteboardsControlle
 ModuleEngine::any('/whiteboards/ajax/{id}/{sessionid}', 'WhiteboardsController@ajax');
 
 // App hooks
-ModuleEngine::registerSidebar('WhiteboardsController@index', "Whiteboards", 'img/image.png');
-ModuleEngine::registerSidebar('WhiteboardsController@create', "Create whiteboard", 'img/image_add.png');
+ModuleEngine::registerSidebar('WhiteboardsController@index', "Whiteboards", 'mdi-image-crop-original');
+ModuleEngine::registerSidebar('WhiteboardsController@create', "Create whiteboard", 'mdi-image-edit');

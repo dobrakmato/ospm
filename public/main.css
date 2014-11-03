@@ -2,24 +2,13 @@
 
 body {
 	font-family: 'Roboto', sans-serif;
+	font-size:14px;
 	margin: 0 0;
 	padding: 0 0;
 }
 
 table {
 	width:100%;
-}
-
-tr, td, th, tbody, thead {
-	margin:0;
-}
-
-td {
-	text-align: center;
-}
-
-th {
-	background:#eee;
 }
 
 .topbar {

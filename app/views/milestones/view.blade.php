@@ -7,8 +7,8 @@
 			<h2>Users participated</h2>
 			<h2>Milestone progress</h2>
 			<span>Progress: 55% (1/9)</span>
-			<div class="progressbar" style="height: 1.5em;border: 1px solid black;width:250px;">
-				<div class="probgressbar-fill" style="background:#44dd99;height:1.5em;width:66px;"></div>
+			<div class="progress">
+			    <div class="progress-bar progress-bar-default" style="width: 60%"></div>
 			</div>
 			<h3>Tasks in this milestone</h3>
 			<div>

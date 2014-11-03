@@ -10,4 +10,4 @@ ModuleEngine::any('/calendar/{year}/{month}/{day}', 'CalendarController@month');
 
 
 // App hooks
-ModuleEngine::registerSidebar('CalendarController@index', "Calendar", 'img/calendar.png');
+ModuleEngine::registerSidebar('CalendarController@index', "Calendar", 'mdi-action-event');

@@ -18,7 +18,7 @@ class FeedController extends AdminController {
 		$task1->category = 'uncategorized';
 		$task1->content = 'Nam arcu libero, laoreet ut eleifend dapibus, pretium ut purus. Mauris interdum amet.';
 		$task1->date = '28.10.2014';
-		$task1->taskid = 362;
+		$task1->taskid = 1;
 		
 		$task1->actions['primary'] = array('url' => action('TasksController@view', array('id' => $task1->taskid)), 'title' => 'Details');
 		

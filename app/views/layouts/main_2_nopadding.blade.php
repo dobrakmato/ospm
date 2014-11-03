@@ -12,7 +12,7 @@
 		        <a class="navbar-brand" href="{{ action('IndexController@index') }}">{{ OSPMConfig::$title }}</a>
 		    </div>
 			 <div class="navbar-collapse collapse navbar-responsive-collapse">
-		        <ul class="nav navbar-nav navbar-right">           			
+		        <ul class="nav navbar-nav navbar-right">
 					@foreach(ModuleEngine::getTopbarItems() as $item)
 						<li>
 							@if($item[2] != null)
@@ -45,7 +45,7 @@
 			<div class="sidebar">
 				@include('layouts.sidebar_2', array('items'=> ModuleEngine::getSidebarItems()))
 			</div>
-			<div class="content">
+			<div class="content" style="padding: 0;">
 				@yield('content')
 			</div>
 		</div>
