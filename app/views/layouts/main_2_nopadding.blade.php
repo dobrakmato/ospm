@@ -2,7 +2,7 @@
 
 @section('body')
 	<div class="wrapper">
-		<div class="navbar navbar-default">
+		<div class="navbar navbar-default nvb">
 			<div class="navbar-header">
 		        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
 		            <span class="icon-bar"></span>
@@ -35,7 +35,8 @@
 		                    <li>{{ HTML::linkAction('SystemController@users', 'Manage users') }}</li>
 		            		<li>{{ HTML::linkAction('SystemController@projects', 'Manage projects') }}</li>
 		                    <li class="divider"></li>
-		                    <li>{{ HTML::linkAction('LoginController@logout', 'Logout') }}</li>
+		                    <li><a href="{{ action('SystemController@settings') }}"><i class="mdi-action-settings"></i> Settings</a></li>
+		                    <li><a href="{{ action('LoginController@logout') }}"><i class="mdi-action-lock"></i> Logout</a></li>
 		                </ul>
 		            </li>
 		        </ul>

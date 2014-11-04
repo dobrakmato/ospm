@@ -96,4 +96,17 @@ function startsWith($haystack, $needle) {
 function endsWith($haystack, $needle) {
 	return $needle === "" || substr($haystack, -strlen($needle)) === $needle;
 }
+function statusLabelClass($status) {
+	if($status == "new") {
+		 return "label label-info";
+	} else if($status == "confirmed") {
+		return "label label-primary";
+	} else if($status == "assigned") {
+		return "label label-warning";
+	} else if($status == "resolved") {
+		return "label label-success";
+	} else if($status == "closed") {
+		return "label label-default";
+	}
+}
 

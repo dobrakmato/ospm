@@ -23,7 +23,12 @@
 					{{ Form::password('password', array('class' => 'form-control', 'placeholder' => "Password")) }}
 				</div>
 			</div>
-			<div>{{ Form::submit('Log in', array('class' => 'btn btn-primary')) }} | {{ Form::button('Forgot password', array('class' => 'btn btn-default')) }}</div>
+			<div class="form-group">
+				<div class="col-lg-9 col-lg-offset-3">
+					{{ Form::button('Forgot password', array('class' => 'btn btn-default')) }}
+					{{ Form::submit('Log in', array('class' => 'btn btn-primary')) }}
+				</div>
+			</div>
 		</fieldset>
 	{{ Form::close() }}
 @stop

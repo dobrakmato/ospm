@@ -20,6 +20,8 @@ Route::any('/system/logout', 'LoginController@logout');
 
 Route::get('/system/register', 'LoginController@showRegister');
 
+Route::get('/settings', 'SystemController@settings');
+
 Route::get('/system/users', 'SystemController@users');
 Route::get('/system/users/{id}', 'SystemController@user');
 

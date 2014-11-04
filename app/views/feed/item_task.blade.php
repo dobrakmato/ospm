@@ -13,7 +13,7 @@
 		<a class="fi-task-bot" href="#" title="mark as not important right now">not important</a></span>
 		<a class="btn btn-success fi-right fi-tbf" href="{{ $item->actions['primary']['url'] }}">Done</a>
 		@if($item->actions['primary'] != null)
-			<a class="btn btn-info fi-right fi-tbf" href="{{ $item->actions['primary']['url'] }}">{{ $item->actions['primary']['title'] }}</a>
+			<a class="btn btn-primary fi-right fi-tbf" href="{{ $item->actions['primary']['url'] }}">{{ $item->actions['primary']['title'] }}</a>
 		@endif
 	</div>
 </div>

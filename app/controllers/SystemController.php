@@ -10,4 +10,9 @@ class SystemController extends AdminController {
 		$users = User::all();
 		return View::make('system.users', array('users' => $users));
 	}
+	
+	public function settings() {
+		$settings = new stdClass();
+		return View::make('system.settings', array('settings' => $settings));
+	}
 }

@@ -24,7 +24,7 @@ class TasksController extends AdminController {
 	
 	public function filter($by, $cond)
 	{
-		$tasks = Task::where($by, '=', $cond);
+		$tasks = Task::where($by, '=', $cond)->get();
 		return View::make('tasks.main', array('tasks' => $tasks));
 	}
 	
