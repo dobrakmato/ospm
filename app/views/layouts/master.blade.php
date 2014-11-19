@@ -24,6 +24,9 @@
                 $.material.init();
             });
         </script>
+		@if(Session::get('ajax') == true)
+			{{ HTML::script('js/ajax.js'); }}
+		@endif
 		
 	</body>
 </html>

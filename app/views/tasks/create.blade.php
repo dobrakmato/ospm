@@ -30,7 +30,7 @@
 						<div class="form-group">
 							{{ Form::label('assingedto', 'Assigned to: ', array('class' => 'col-lg-2 control-label')) }}
 							<div class="col-lg-10">
-								{{ Form::text('assingedto', null, array('class' => 'form-control')) }}
+								{{ Form::select('assingedto', User::all()->lists('displayname'), null, array('class' => 'form-control')) }}
 							</div>
 						</div>
 						<div class="form-group">

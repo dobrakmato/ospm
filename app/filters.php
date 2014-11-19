@@ -19,7 +19,13 @@ App::before(function($request)
 
 App::after(function($request, $response)
 {
-	//
+	if($request->input('use_ajax') == "true") {
+		$content = $response->getOriginalContent();
+		$start = strpos($content, "<!-- ##ajaxstart -->") + 20;
+		$end = strpos($content, "<!-- ##ajaxend -->"); 
+		$content = substr($content, $start, $end - $start);
+		$response->setContent($content);
+	}
 });
 
 /*

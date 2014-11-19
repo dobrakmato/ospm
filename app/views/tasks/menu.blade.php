@@ -9,7 +9,10 @@
 	        </a>
 	        <ul class="dropdown-menu">
 	        	@foreach(Project::all(array('abbr', 'name', 'id')) as $project)
-	            	<li><a href="{{ action('TasksController@filter', array('by' => 'project_id', 'cond' => $project->id)) }}" title="{{ $project->name }}">{{ $project->abbr }}</a></li>
+	            	<li>
+	            		<a href="{{ action('TasksController@filter', array('by' => 'project_id', 'cond' => $project->id)) }}" 
+	            		   title="{{ $project->name }}"><i class="mdi-file-folder-open"></i> {{ $project->abbr }}</a>
+	            	</li>
 	            @endforeach
 	        </ul>
 	    </li>

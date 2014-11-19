@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'IndexController@index');
+Route::get('/session/{what}', 'IndexController@set');
 
 Route::get('/system/login', 'LoginController@showLogin');
 Route::post('/system/login', 'LoginController@doLogin');

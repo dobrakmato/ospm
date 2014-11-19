@@ -46,8 +46,8 @@
 			<div class="sidebar">
 				@include('layouts.sidebar_2', array('items'=> ModuleEngine::getSidebarItems()))
 			</div>
-			<div class="content">
-				@yield('content')
+			<div id="ajax_content" class="content">
+				<!-- ##ajaxstart -->@yield('content')<!-- ##ajaxend -->
 			</div>
 		</div>
 	</div>
